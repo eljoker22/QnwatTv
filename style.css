@@ -5,12 +5,15 @@ body{
 
     min-height: 100%;
     min-width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
 }
 .dev{
     background-image: url("assets/back.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh + 20px);
+    height: calc(100vh + 60px);
     position: relative;
 }
 
@@ -209,5 +212,9 @@ span.animate.span4{
             height: 350px;
             border-left-color: transparent;
             animation: animate2 5s linear infinite;
+        }
+        span.animate{
+            top: 35%;
+
         }
     }
