@@ -1,0 +1,212 @@
+body{
+    margin: 0;
+}
+.container{
+
+    min-height: 100%;
+    min-width: 100%;
+}
+.dev{
+    background-image: url("assets/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh + 20px);
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header img{
+    width: 250px;
+}
+.devices{
+    display: flex;
+    justify-content: center;
+}
+.device1{
+    width: 200px;
+    margin-right: -122px;
+    z-index: 3;
+}
+.device2{
+    width: 400px;
+    height: 220px;
+    transform: translate(0, 160px);
+    z-index: 2;
+}
+.p{
+    display: flex;
+    justify-content: center;
+}
+.p h1{
+    text-align: center;
+    width: 450px;
+    color: #fff;
+    z-index: 2;
+}
+.p span{
+    color: #F39422;
+}
+.download{
+    display: flex;
+    justify-content: center;
+}
+.download img{
+    width: 250px;
+    z-index: 2;
+}
+
+span.animate{
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #F39422;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+span.animate.span1{
+    width: 400px;
+    height: 400px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: animate1 5s linear infinite;
+}
+
+span.animate.span2{
+    width: 350px;
+    height: 350px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: animate2 5s linear infinite;
+}
+span.animate.span3{
+    width: 250px;
+    height: 250px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    animation: animate3 5s linear infinite;
+}
+span.animate.span4{
+    width: 450px;
+    height: 450px;
+    border-left-color: transparent;
+    animation: animate2 5s linear infinite;
+}
+.loader{
+    background-color: #293A80;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader .logo-load img{
+    width: 200px;
+}
+.loader .spinar{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid #F39422;
+    overflow: hidden;
+    padding: 1px;
+}
+.spinar .spin{
+    width: 60px;
+    height: 28px;
+    border-radius: 30px;
+    background-color: #F39422;
+    animation: loading 2s infinite linear;
+}
+.loader.loaded{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes loading {
+    0%{
+        transform:  translate(-60px,0);    
+    }
+    100%{
+        transform:  translate(200px, 0);
+    }
+}
+@keyframes animate1 {
+    0%{
+        transform:  translate(-50%, -50%) rotate(0deg);    
+    }
+    100%{
+        transform:  translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes animate2 {
+    0%{
+        transform:  translate(-50%, -50%) rotate(0deg);    
+    }
+    100%{
+        transform:  translate(-50%, -50%) rotate(-360deg);
+    }
+}
+@keyframes animate3 {
+    0%{
+        transform:  translate(-50%, -50%) rotate(0deg);    
+    }
+    100%{
+        transform:  translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+@media (max-width: 520px) {
+    /* … */
+        .devices{
+            margin-top: 74px;
+        }
+        .device1{
+            width: 180px;
+            margin-right: -122px;
+        }
+        .device2{
+            width: 300px;
+            height: 165px;
+            transform: translate(0, 160px);
+        }
+        span.animate.span1{
+            width: 300px;
+            height: 300px;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            animation: animate1 5s linear infinite;
+        }
+        
+        span.animate.span2{
+            width: 250px;
+            height: 250px;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            animation: animate2 5s linear infinite;
+        }
+        span.animate.span3{
+            width: 150px;
+            height: 150px;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            animation: animate3 5s linear infinite;
+        }
+        span.animate.span4{
+            width: 350px;
+            height: 350px;
+            border-left-color: transparent;
+            animation: animate2 5s linear infinite;
+        }
+    }
